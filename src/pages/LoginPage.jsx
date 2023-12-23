@@ -5,7 +5,6 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [address, setAddress] = useState("");
 //landing page
-// rohit love you baby
   const onPressConnect = async () => {
     setLoading(true);
     try {
