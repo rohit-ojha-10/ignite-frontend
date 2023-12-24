@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ConnectWalletButton from "../assets/components/ConnectWalletButton";
+import ConnectWalletButton from "../../assets/components/ConnectWalletButton";
+import { LoginCard } from "./LoginCard";
 import Web3 from "web3";
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
@@ -27,14 +28,15 @@ const LoginPage = () => {
   const onPressLogout = () => setAddress("");
   return (
     <div>
-      <div>
+      {/* <div>
         <ConnectWalletButton
           onPressConnect={onPressConnect}
           onPressLogout={onPressLogout}
           loading={loading}
           address={address}
         />
-      </div>
+      </div> */}
+      <LoginCard/>
     </div>
   );
 };

@@ -1,42 +1,111 @@
 #root {
-  max-width: 1280px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  
+}
+.top-section{
+  max-width: 95%;
+  margin: 0 auto;
+
+}
+/* fundsData bar start */
+.total-funds-data{
+  text-align: center;
+  margin: 50px auto;
+  max-width: 90%;
+  max-height: 100px;
+  background-color: whitesmoke;
+  display:flex;
+  border-radius: 10px;
+}
+.total-funds-data h2{
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #2C87F7;
+  font-size: 2.4em;
+  font-weight: 800;
+}
+.total-funds-data p{
+  margin-top: 0px;
+  font-size:1em;
+  font-weight: 500;
+  color: #686868;
+}
+.fund-data-colums{
+  margin: 0 auto;
+  width: 100%;
+}
+.middle-data{
+  border-left: 2px solid #11E6FC ;
+  border-right: 2px solid #11E6FC ;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+/* fundsData bar end */
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* heroSection start */
+.hero-section{
+  margin-top: 60px;
+  display:grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 80% 20%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.tagLine-card{
+  text-align: left;
+  height: 100%;
+  width: 100%; 
 }
-
-.card {
-  padding: 2em;
+.tagLine-card h1{
+  margin: 53px auto;
+  font-size: 3em;
+  width: 90%;
 }
-
-.read-the-docs {
-  color: #888;
+.tagLine-card h2{
+  margin: 38px auto;
+  font-size: 1.8em;
+  width: 90%;
 }
+.start-fundraiser-button{
+  font-size: 200%;
+  font-weight: 900;
+  border-radius: 100px;
+  height: 70%;
+  width: 55%; 
+  margin: auto;
+  user-select: none;
+  color: #5E84D5;
+}
+.image-card{
+  grid-row: 1/3;
+  grid-column: 2/3;
+  height: 450px;
+  width: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.gradient{
+  grid-row: 1/3;
+  grid-column: 2/3;
+  border-radius: 10px;
+  height: 450px;
+  width: 450px;
+  background-color: black;
+  opacity: .1;
+}
+.text-layer{
+  grid-row: 1/3;
+  grid-column: 2/3;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+  width: 450px;
+  
+}
+.img-txt{
+  margin:20px;
+  color: white;
+}
+/* imageSection end */
