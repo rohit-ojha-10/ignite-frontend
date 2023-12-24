@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ConnectWalletButton from "../assets/components/ConnectWalletButton";
+import ConnectWalletButton from "../../assets/components/ConnectWalletButton";
 import Web3 from "web3";
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
