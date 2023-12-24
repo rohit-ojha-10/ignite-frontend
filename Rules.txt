@@ -1,0 +1,8 @@
+Rules 
+-Camelcase variable names
+-Break every page into components 
+-No inline css allowed 
+-No absolute css allowed
+-Add comments to your code
+-use react-icons only for icons
+-use Material Tailwind only for styled components
