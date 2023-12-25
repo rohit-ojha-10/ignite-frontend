@@ -1,8 +1,10 @@
 import React from 'react'
 import Img from '../../../assets/images/dog.jpg'
 function TopSection() {
+  const title = 'Put pets in vets';
+  const description = 'Do not let your pet lick your face or hands. Keep your pet up to date on all vaccinations and heartworm, flea, and tick preventives. Practice safe handling of your pet because your pet may behave differently during a stressful situation. Keep your pet in a carrier or on a leash.'
   return (
-    <div className='top-section' >
+    <div className='top-section' style={{color:'black'}}>
       {/*   
       
       ~~~~~~~~~~ Hero section start ~~~~~~~~~~~~~~~~
@@ -20,8 +22,8 @@ function TopSection() {
 
         <div className='text-layer' >                   {/* image text layer */}
           <div className='image-top-text img-txt'>
-            <h1 >Title</h1>                            {/* add dinamic data */}
-            <h2>Description</h2>                       
+            <h1 >{title}</h1>                            {/* add dinamic data */}
+            <h3>{description}</h3>                       
           </div>
           <h1 className='image-bottom-txt img-txt'>10,000 people funded this project</h1>
         </div>
