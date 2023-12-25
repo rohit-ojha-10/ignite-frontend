@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 42%;
+  color: white;
+  font-family: "Orbitron";
+  font-style: oblique;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button1 {
+  margin-right: 10px;
+  margin-left: 10px;
+}

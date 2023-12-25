@@ -1,16 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages/login-page/LoginPage";
+import LandingPage from "./pages/landing-page/LandingPage";
 
 function App() {
   return (
     <>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </HashRouter>
     </>

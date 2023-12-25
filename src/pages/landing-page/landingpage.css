@@ -1,0 +1,10 @@
+.landingpage {
+    background-color: black;
+    height: 100vh;
+}
+
+.navbar {
+    height: 60px;
+    color: white;
+    width: 100%;
+}
