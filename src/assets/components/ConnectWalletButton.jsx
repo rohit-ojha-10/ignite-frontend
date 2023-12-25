@@ -1,3 +1,5 @@
+import { Button } from "@material-tailwind/react";
+
 const ConnectWalletButton = ({
   onPressLogout,
   onPressConnect,
@@ -7,19 +9,19 @@ const ConnectWalletButton = ({
   return (
     <div>
       {address && !loading ? (
-        <button onClick={onPressLogout}>
+        <Button variant="outlined" onClick={onPressLogout}>
           Disconnect
-        </button>
+        </Button>
       ) : loading ? (
-        <button
+        <Button variant="outlined"
           disabled
         >
           <div>Loading...</div>
-        </button>
+        </Button>
       ) : (
-        <button onClick={onPressConnect}>
+        <Button variant="filled" onClick={onPressConnect}>
           Connect Wallet
-        </button>
+        </Button>
       )}
     </div>
   );

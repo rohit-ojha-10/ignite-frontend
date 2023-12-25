@@ -11,7 +11,7 @@ function TopSection() {
       
       */}
       {/*                 FundData bar              */}
-      <div className='total-funds-data' >
+      <div className='total-funds-data  shadow-lg' >
         <div className='fund-data-colums' >
           <h2>251,256</h2>
           <p>project funded</p>
@@ -45,7 +45,7 @@ function TopSection() {
         </div>
 
         {/* Button */}
-        <button className='start-fundraiser-button' onClick={()=>alert("clicked")} >Start a Fundraiser</button>
+        <button className='start-fundraiser-button shadow-lg' onClick={()=>alert("clicked")} >Start a Fundraiser</button>
       </div>
       {/* 
       

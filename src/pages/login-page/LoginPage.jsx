@@ -41,4 +41,5 @@ const StyledDiv = styled.div`
   align-self: center;
   align-items: center;
 `;
+
 export default LoginPage;
