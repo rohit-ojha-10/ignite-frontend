@@ -23,23 +23,51 @@ import {
 import { SiFireship } from "react-icons/si";
 import { useFormik } from "formik";
 import axios from "axios";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function LoginCard() {
   const [type, setType] = React.useState("card");
+  const { login } = useAuth();
+  const navigate = useNavigate();
   const handleSignUp = async ({ values }) => {
-    const response = await axios.post("http://localhost:2000/user/create", {
-      ...values,
-      username: values.newUsername,
-      password: values.newPassword,
-    });
-    console.log({ response });
+    try {
+      const response = await axios.post("http://localhost:2000/user/create", {
+        ...values,
+        username: values.newUsername,
+        password: values.newPassword,
+      });
+      console.log({ response });
+      if (response.data?.success) {
+        await toast.success('User Created Successfully,Login to Continue')
+        navigate("/login");
+      }
+      else {
+        toast.error("Credentials Already Exists")
+      }
+      
+    } catch (error) {
+      toast.error('Some unexpected Error Occured')
+    }
   };
   const handleLogin = async ({ values }) => {
     console.log({ values });
-    const response = await axios.post("http://localhost:2000/user/login", {
-      ...values,
-    });
-    console.log({ response });
+    try {
+      const response = await axios.post("http://localhost:2000/user/login", {
+        ...values,
+      });
+      if (response.data?.success) {
+        login(response.data.authToken);
+        navigate("/");
+      }
+      else {
+        toast.error("Invalid Credentials . Try Again")
+      }
+      console.log({ response });
+    } catch (err) {
+      console.log({ err });
+    }
   };
   const signUpForm = useFormik({
     initialValues: {
@@ -64,16 +92,18 @@ export default function LoginCard() {
   return (
     <Card>
       <CardHeader
-        color="gray"
+      style={{backgroundColor:'whitesmoke'}}
+        // color="gray"
         floated={false}
         shadow={false}
         className="m-0 grid place-items-center px-4 py-8 text-center"
       >
         <div className="mb-4 h-20 p-6 text-white">
-          <SiFireship size={50} />
+          <SiFireship size={50} color="#2C87F7"/>
         </div>
-        <Typography variant="h4" color="white">
-          Ignite your own project , or help someone else begin one!
+        <Typography  variant="h5" >
+          Ignite your own project , 
+          or help someone else begin one!
         </Typography>
       </CardHeader>
       <CardBody>
@@ -143,7 +173,7 @@ export default function LoginCard() {
                     onChange={loginForm.handleChange}
                   />
                 </div>
-                <Button type="submit" size="lg">
+                <Button color="light-blue" type="submit" size="lg">
                   Login
                 </Button>
                 <Typography
@@ -238,7 +268,7 @@ export default function LoginCard() {
                     onChange={signUpForm.handleChange}
                   />
                 </div>
-                <Button type="submit" size="lg">
+                <Button color="light-blue" type="submit" size="lg">
                   Signup
                 </Button>
                 <Typography

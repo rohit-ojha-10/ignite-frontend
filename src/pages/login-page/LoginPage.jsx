@@ -2,6 +2,8 @@ import { useState } from "react";
 import Web3 from "web3";
 import LoginCard from "./LoginCard";
 import styled from "@emotion/styled";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [address, setAddress] = useState("");
@@ -29,6 +31,7 @@ const LoginPage = () => {
   return (
     <StyledDiv>
       <LoginCard />
+      <ToastContainer />
     </StyledDiv>
   );
 };

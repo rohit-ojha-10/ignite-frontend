@@ -74,6 +74,7 @@
   margin: auto;
   user-select: none;
   color: #5E84D5;
+  background-color: whitesmoke;
 }
 .start-fundraiser-button:hover{
   cursor: pointer;

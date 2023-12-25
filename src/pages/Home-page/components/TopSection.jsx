@@ -10,6 +10,22 @@ function TopSection() {
       ~~~~~~~~~~ Hero section start ~~~~~~~~~~~~~~~~
       
       */}
+      {/*                 FundData bar              */}
+      <div className='total-funds-data' >
+        <div className='fund-data-colums' >
+          <h2>251,256</h2>
+          <p>project funded</p>
+        </div>
+        <div className='fund-data-colums middle-data ' >
+          <h2>$72,754,462</h2>
+          <p>towards creative work</p>
+        </div>
+        <div className='fund-data-colums' >
+          <h2>54,462,083</h2>
+          <p>pledges</p>
+        </div>
+        
+      </div>
       <div className='hero-section' >
 
         <div className='tagLine-card' >
@@ -36,22 +52,6 @@ function TopSection() {
       ~~~~~~~~~~~~~~ Hero section end ~~~~~~~~~~~~~~~~~~~
       
       */}
-      {/*                 FundData bar              */}
-      <div className='total-funds-data' >
-        <div className='fund-data-colums' >
-          <h2>251,256</h2>
-          <p>project funded</p>
-        </div>
-        <div className='fund-data-colums middle-data ' >
-          <h2>$72,754,462</h2>
-          <p>towards creative work</p>
-        </div>
-        <div className='fund-data-colums' >
-          <h2>54,462,083</h2>
-          <p>pledges</p>
-        </div>
-        
-      </div>
     </div>
   )
 }
