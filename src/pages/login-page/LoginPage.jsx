@@ -1,6 +1,9 @@
 import { useState } from "react";
-import ConnectWalletButton from "../assets/components/ConnectWalletButton";
 import Web3 from "web3";
+import LoginCard from "./LoginCard";
+import styled from "@emotion/styled";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [address, setAddress] = useState("");
@@ -26,16 +29,16 @@ const LoginPage = () => {
 
   const onPressLogout = () => setAddress("");
   return (
-    <div>
-      <div>
-        <ConnectWalletButton
-          onPressConnect={onPressConnect}
-          onPressLogout={onPressLogout}
-          loading={loading}
-          address={address}
-        />
-      </div>
-    </div>
+    <StyledDiv>
+      <LoginCard />
+      <ToastContainer />
+    </StyledDiv>
   );
 };
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+`;
 export default LoginPage;
