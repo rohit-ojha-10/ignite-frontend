@@ -1,10 +1,9 @@
 import { Button } from "@material-tailwind/react";
 import React, { useState } from "react";
 import "./navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGripfire } from "@fortawesome/free-brands-svg-icons"; // Import the specific icon
 import { Avatar } from "@material-tailwind/react";
-
+import { SiFireship } from "react-icons/si";
+import { NavLink } from "react-router-dom"
 const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -15,9 +14,14 @@ const NavBar = () => {
 
   return (
     <div className="nav">
+      {/* <div>
+        <img src={'../assets/images/ignitelogo-png.png'} />
+      </div> */}
       <div className="logo">
-        PROJECT <span style={{ color: "#0443f2" }}>IGNITE</span>
-        <FontAwesomeIcon icon={faGripfire} style={{ color: "#0443f2" }} />
+        <div style={{ display: "inline-block" }}>
+          <SiFireship color="black" />
+        </div>
+        <span style={{ color: "#0443f2" }}>PROJECT IGNITE</span>
       </div>
 
       <div className="button">
@@ -27,9 +31,11 @@ const NavBar = () => {
             alt="avatar"
           />
         ) : (
+          <NavLink to={'/login'}>
           <Button className="button1" onClick={handleLogin}>
             Log In
           </Button>
+          </NavLink>
         )}
       </div>
     </div>

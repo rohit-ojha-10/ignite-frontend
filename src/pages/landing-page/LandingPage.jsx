@@ -5,7 +5,7 @@ import Navbar from "../../shared/NavBar";
 const LandingPage = () => {
   return (
     <div className="landingpage">
-
+      <Navbar />
       <div className="navbar">
       {<Navbar />}
       </div>

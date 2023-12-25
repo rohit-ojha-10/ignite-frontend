@@ -1,16 +1,22 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Route, Routes, useRoutes } from "react-router-dom";
 import LoginPage from "./pages/login-page/LoginPage";
-import LandingPage from "./pages/landing-page/LandingPage";
+import HomePage from "./pages/Home-page/HomePage";
 
 function App() {
+  const routes = useRoutes([
+    {
+      path:'/',
+      element: <HomePage/>
+    },
+    {
+      path:'/login',
+      element: <LoginPage/>
+    }
+  ])
   return (
     <>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </HashRouter>
+      {routes}
     </>
   );
 }
